@@ -13,17 +13,15 @@ _Jokes_
 
 What do you call a game console programmed in Rust? A `Playstacean`!
 
-## Table of contents
+## Rust Project Overview
 
-[TOC]
-
-## Things to note
+[TOC]  ## Things to note
 
 ### .gitignore and why is it important
 
 1. In the [.gitignore]("./.gitignore") it is important to note the following
     1. You can always ignore the `./target` directory as this just contains the built project.
-    2. You **can** ignore the `./Cargo.lock` but note the following. [_- Source_](https://stackoverflow.com/questions/43667176/what-files-in-a-cargo-project-should-be-in-my-gitignore)
+    2. You **can** ignore the `./Cargo.lock` but note the following. [_- Source_](https://stackoverflow.com/questions/43667176/what-files-in- a-cargo-project-should-be-in-my-gitignore)
         - On the one hand, you should always test your library with the latest version of all your dependencies. That's an argument **against** Cargo.lock.
         - On the **other** hand, Cargo.lock gives you the same benefit as in other projects: reproducible builds mean stable CI, easier bisecting, yada yada.
     3. See the [.gitignore](.gitignore) for the comments on what is ignored and why they are ignored.
