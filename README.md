@@ -15,7 +15,7 @@ What do you call a game console programmed in Rust? A `Playstacean`!
 
 ## Table of contents
 
-[toc]
+[TOC]
 
 ## Things to note
 
@@ -38,6 +38,5 @@ What do you call a game console programmed in Rust? A `Playstacean`!
 | :------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [Cargo.toml](./Cargo.toml) | TOML is designed to map unambiguously to hash table. </br> The `Cargo.toml` file contains the application's metadata </br> [name, version, dependencies for _packages_ which contains _things_ called `creates` in Rust] </br> This serves as the configuration file for your program/crate. |
 | [main.rs](./src/main.rs) | This is your main function/entrypoint of execution in the program.</br> Other code will be called from this function. |
-| | |
 
-
+> Date : 2024-06-15
