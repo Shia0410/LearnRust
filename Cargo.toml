@@ -1,0 +1,39 @@
+[package]
+name = "LearnRust"                  # The crate name
+version = "0.1.0"                   # The crate's current version
+edition = "2021"                    # Which "Rust Edition" the crate utilizes
+description = "This project serves as a way for me to learn the Rust programming language." # A description of our crate for `crates.io`
+keywords = [""]                     # Keywords for searches on `crates.io`
+documentation = "https://github.com/Shia0410/LearnRust/README.md" # URL to the crate's documentation
+homepage = ""                       # URL to the crate's homepage
+repository = "https://github.com/Shia0410/LearnRust" # URL of the crate's source repository
+authors = ["Michael Sauerman"]      # The authors of the crate
+license = "MIT license"             # The crate's license
+rust-version = "1.56"               # The minimum supported Rust version
+
+
+[dependencies]
+# Examples of ways to do dependencies.
+
+# Note dependancies can also be done relative to the file path for example
+# serde = {path = "./src/libraries/serde"}
+
+#   serde = { git = "https://github.com/serde-rs/serde" }
+
+# A specific branch
+#   serde = { git = "https://github.com/serde-rs/serde", branch = "next" }
+
+# A specific commit hash
+#   serde = { git = "https://github.com/serde-rs/serde", rev = "7e19ae8c9486a3bbbe51f1befb05edee94c454f9" }
+
+# ALSO TO NOTE !!!
+
+# We are capable of many other things within our manifest file such as specifying 
+# [dev-dependencies], declaring [features] for our own crate, creating a 
+# [profile] for specific compilation settings, and even making a [workspace] for 
+# managing multiple crates within the same package.
+
+# For a comprehensive list of all available functionality, check out 
+# Cargo’s reference guide for the Manifest Format. - LINK https://doc.rust-lang.org/cargo/reference/manifest.html
+# SOURCE https://www.codecademy.com/courses/rust-for-programmers/articles/cargo-manifest
+
