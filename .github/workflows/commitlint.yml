@@ -1,0 +1,36 @@
+name: Lint Commit Messages
+
+on: [push, pull_request]  # Run on push and pull request events
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+    steps:
+      - uses: actions/checkout@v4  # Checkout the repository code
+
+      - name: Use Node.js 16  # Install specific Node.js version
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+
+      - name: Install commitlint dependencies
+        run: npm install --save-dev @commitlint/{cli,config-conventional}
+
+      - name: Check commitlint version
+        run: npx commitlint --version
+
+      - name: Create commitlint config
+        run: |
+          echo "export default {
+            extends: ['@commitlint/config-conventional'],
+            rules: {
+              'type-enum': [2, 'always', ['build', 'chore', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'revert', 'style', 'test', 'button']],
+            },
+          }" > .github/commitlint.mjs
+
+      - name: Lint recent commits (adjust `--from` and `--to` if needed)
+        run: npx commitlint --from HEAD~1 --to HEAD --verbose
+
+      - name: Fail workflow if there are commitlint errors
+        if: ${{ failure() }}
+        run: exit 1 
